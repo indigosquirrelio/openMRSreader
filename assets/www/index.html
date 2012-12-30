@@ -19,16 +19,17 @@
         <h1 style = "font-size: 23px; white-space: normal;">OpenMRS</h1>
     </div>
 
-    <div data-role="content">   
+    <div data-role="content">
         <ul id = "list2" data-role="listview" data-icon="arrow-r" data-inset="true" data-filter="false" data-theme="d" style="white-space: normal">
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="1">Bamboo build results feed for all builds</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="2">Bamboo failed build results feed for all builds</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="3">OpenMRS Screencasts/Videos</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="4">OpenMRS Developers</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="5">OpenMRS Announcements</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="6">OpenMRS Subversion Commits</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="7">FishEye</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="8">Crucible</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="1">OpenMRS Implementers Google Group</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="2">Bamboo build results feed for all builds</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="3">Bamboo failed build results feed for all builds</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="4">OpenMRS Screencasts/Videos</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="5">OpenMRS Developers</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="6">OpenMRS Announcements</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="7">OpenMRS Subversion Commits</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="8">FishEye</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="9">Crucible</a></li>
         </ul> 
     </div>
 </div>
@@ -76,7 +77,7 @@
 <script type = "text/javascript">
     $(document).ready(function() {
         document.addEventListener("deviceready", onDeviceReady, false);
-        var xml = ['https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssAll','https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssFailed','http://gdata.youtube.com/feeds/base/users/OpenMRS/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile','https://groups.google.com/a/openmrs.org/group/dev/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/announce/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/svn/feed/rss_v2_0_topics.xml','https://source.openmrs.org/?view=fe&RSS=true','https://source.openmrs.org/?view=cru&RSS=true'];
+        var xml = ['https://groups.google.com/a/openmrs.org/group/implementers/feed/rss_v2_0_topics.xml','https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssAll','https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssFailed','http://gdata.youtube.com/feeds/base/users/OpenMRS/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile','https://groups.google.com/a/openmrs.org/group/dev/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/announce/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/svn/feed/rss_v2_0_topics.xml','https://source.openmrs.org/?view=fe&RSS=true','https://source.openmrs.org/?view=cru&RSS=true'];
         $(".contentLink2").bind("click", function() { //Capture link click
             selected = $(this).data("entryid");
             if (typeof selected !== "undefined") { //Check if everything is okay
@@ -112,6 +113,20 @@
                         list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
                     }  
             }
+            else if (xml.indexOf(feed) == 0) {
+                items = xmlDoc.getElementsByTagName("item"); //Get each item individually
+                for (i = 0; i < items.length; i++) { 
+                        if (i == 1) {
+                        var title = "No Title";
+                        }
+                        else {
+                        var title = (items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
+                        }
+                        var date = (items[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue).split(" +0000")[0];
+                        var description = items[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                        list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
+                    }  
+            }
             $("#list").append(list);
             $("#list").listview("refresh");
             $(".contentLink").bind("click", function() { //Capture link click
@@ -124,6 +139,7 @@
             });
 
             $("#DisplayPage").bind("pagebeforeshow", function(prepage) {
+                if ((feed == 'https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssAll') && selectedEntry == 1)
                 var title = (items[selectedEntry].getElementsByTagName("title")[0].childNodes[0].nodeValue); //get title name
                 document.getElementById("titleText").innerHTML = title; //Set title
                 content = items[selectedEntry].getElementsByTagName("description")[0].childNodes[0].nodeValue;
