@@ -8,6 +8,7 @@
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript">$(document).bind("mobileinit", function () {  $.mobile.defaultPageTransition = "none"; });</script>
     <script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript" src="js/json2.min.js"></script>
     <script src="cordova-2.2.0.js"></script>
     <script src ="childbrowser.js"></script>
     <script src ="share.js"></script>
@@ -21,15 +22,15 @@
 
     <div data-role="content">
         <ul id = "list2" data-role="listview" data-icon="arrow-r" data-inset="true" data-filter="false" data-theme="d" style="white-space: normal">
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="1">OpenMRS Implementers Google Group</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="2">Bamboo build results feed for all builds</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="3">Bamboo failed build results feed for all builds</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="4">OpenMRS Screencasts/Videos</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="5">OpenMRS Developers</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="6">OpenMRS Announcements</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="7">OpenMRS Subversion Commits</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="8">FishEye</a></li>
-            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="9">Crucible</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px; height: 100px;" data-entryid="1">OpenMRS Implementers Google Group</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px; height: 100px;" data-entryid="2">Bamboo build results feed for all builds</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px; height: 100px;" data-entryid="3">Bamboo failed build results feed for all builds</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px; height: 100px;" data-entryid="4">OpenMRS Screencasts/Videos</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px; height: 100px;" data-entryid="5">OpenMRS Developers</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px; height: 100px;" data-entryid="6">OpenMRS Announcements</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px; height: 100px;" data-entryid="7">OpenMRS Subversion Commits</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px; height: 100px;" data-entryid="8">FishEye</a></li>
+            <li class="contentLink2" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink2" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px; height: 100px;" data-entryid="9">Crucible</a></li>
         </ul> 
     </div>
 </div>
@@ -44,10 +45,16 @@
 
         </ul> 
     </div>
+
+    <div data-role="popup" id="refreshit" data-overlay-theme="b" style = "text-align:center;">
+        <p id = "disMes" style = "font-size: 24px;"><br><strong></strong><br><br></p>
+    </div>
+
     <div data-role="footer" data-theme="b" data-position="fixed" style = "text-align:center; height: 50px;">
         <div data-role="navbar">
             <ul id = "navigation">
                 <li><a href="#viewPage" data-rel="back" id = "back" data-transition="slide">Back</a></li>
+                <li><a href="#refreshit" id = "refresh" data-rel="popup" data-theme="b" data-position-to="window">Refresh</a></li>
             </ul>
         </div>
     </div>
@@ -76,8 +83,120 @@
 
 <script type = "text/javascript">
     $(document).ready(function() {
-        document.addEventListener("deviceready", onDeviceReady, false);
+        function refresh() {
+                var storage = window.localStorage;
+                var xml = ['https://groups.google.com/a/openmrs.org/group/implementers/feed/rss_v2_0_topics.xml','https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssAll','https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssFailed','http://gdata.youtube.com/feeds/base/users/OpenMRS/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile','https://groups.google.com/a/openmrs.org/group/dev/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/announce/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/svn/feed/rss_v2_0_topics.xml','https://source.openmrs.org/?view=fe&RSS=true','https://source.openmrs.org/?view=cru&RSS=true'];
+                var xml1 = ['https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssAll','https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssFailed','http://gdata.youtube.com/feeds/base/users/OpenMRS/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile'];
+                var xml2 = ['https://groups.google.com/a/openmrs.org/group/dev/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/announce/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/svn/feed/rss_v2_0_topics.xml','https://source.openmrs.org/?view=fe&RSS=true','https://source.openmrs.org/?view=cru&RSS=true'];
+                xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET",feed,false); 
+                xmlhttp.send();
+                xmlDoc = xmlhttp.responseXML; //Get the xml
+                items = xmlDoc.getElementsByTagName("item");
+                var titlelist = "";
+                var datelist = "";
+                var descriptionlist = "";
+                var linklist = "";
+                var list = "";
+                if (xml1.indexOf(feed) != -1) {
+                    for (i = 0; i < items.length; i++) { 
+                            var title = (items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
+                            var date = (items[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue).split(" +0000")[0];
+                            var description = items[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                            var link = items[i].getElementsByTagName("link")[0].childNodes[0].nodeValue;
+                            if ((typeof title === "undefined") || (title == "")) {
+                                title = "No Title";
+                            }
+                            if ((typeof date === "undefined") || (date == "")) {
+                                date = "No Date";
+                            }
+                            if ((typeof description === "undefined") || (description == "")) {
+                                description = "No Description";
+                            }
+                            if ((typeof link === "undefined") || (link == "")) {
+                                link = "No Link";
+                            }
+                            titlelist += title + ",";
+                            datelist += date + ",";
+                            descriptionlist += description + ",";
+                            linklist += link + ",";
+                            list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid2="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
+                        }
+                    }
+                else if (xml2.indexOf(feed) != -1) {
+                    for (i = 0; i < items.length; i++) { 
+                            var title = (items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
+                            var date = (items[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue).split(" +0000")[0];
+                            var description = items[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                            var link = items[i].getElementsByTagName("link")[0].childNodes[0].nodeValue;
+                            if ((typeof title === "undefined") || (title == "")) {
+                                title = "No Title";
+                            }
+                            if ((typeof date === "undefined") || (date == "")) {
+                                date = "No Date";
+                            }
+                            if ((typeof description === "undefined") || (description == "")) {
+                                description = "No Description";
+                            }
+                            if ((typeof link === "undefined") || (link == "")) {
+                                link = "No Link";
+                            }
+                            titlelist += title + ",";
+                            datelist += date + ",";
+                            descriptionlist += description + ",";
+                            linklist += link + ",";
+                            list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid2="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
+                        }  
+                    }
+                else if (xml.indexOf(feed) == 0) {
+                    for (i = 0; i < items.length; i++) { 
+                            var title = (items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
+                            var date = (items[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue).split(" +0000")[0];
+                            var description = items[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                            var link = items[i].getElementsByTagName("link")[0].childNodes[0].nodeValue;
+                            if ((typeof title === "undefined") || (title == "")) {
+                                title = "No Title"
+                            }
+                            if ((typeof date === "undefined") || (date == "")) {
+                                date = "No Date"
+                            }
+                            if ((typeof description === "undefined") || (description == "")) {
+                                description = "No Description"
+                            }
+                            if ((typeof link === "undefined") || (link == "")) {
+                                link = "No Link"
+                            }
+                            titlelist += title + ",";
+                            datelist += date + ",";
+                            descriptionlist += description + ",";
+                            linklist += link + ",";
+                            list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid2="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
+                        }  
+                    }
+                titlelist = titlelist.slice(0, -1)
+                datelist = datelist.slice(0, -1)
+                descriptionlist = descriptionlist.slice(0, -1)
+                linklist = linklist.slice(0, -1)
+                storage.setItem((feed+"title"), titlelist)
+                storage.setItem((feed+"date"), datelist)
+                storage.setItem((feed+"description"), descriptionlist)
+                storage.setItem((feed+"link"), linklist)
+                storage.setItem(feed, list)
+                list = localStorage.getItem(feed)
+                $("#list").empty();
+                $("#list").append(list);
+                $("#list").listview("refresh");
+                $(".contentLink").bind("click", function() { //Capture link click
+                    $("#article").empty();
+                    selected = $(this).data("entryid2");
+                    if (typeof selected !== "undefined") { //Check if everything is okay
+                        selectedEntry = selected;
+                    }
+                    window.location = "#DisplayPage"; //View the content
+                });
+                }
         var xml = ['https://groups.google.com/a/openmrs.org/group/implementers/feed/rss_v2_0_topics.xml','https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssAll','https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssFailed','http://gdata.youtube.com/feeds/base/users/OpenMRS/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile','https://groups.google.com/a/openmrs.org/group/dev/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/announce/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/svn/feed/rss_v2_0_topics.xml','https://source.openmrs.org/?view=fe&RSS=true','https://source.openmrs.org/?view=cru&RSS=true'];
+        document.addEventListener("deviceready", onDeviceReady, false);
         $(".contentLink2").bind("click", function() { //Capture link click
             selected = $(this).data("entryid");
             if (typeof selected !== "undefined") { //Check if everything is okay
@@ -88,75 +207,53 @@
         $("#mainPage").bind("pagebeforeshow", function(prepage) {
             $("#list").empty();
             var selectedEntry = "";
-            var xml1 = ['https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssAll','https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssFailed','http://gdata.youtube.com/feeds/base/users/OpenMRS/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile'];
-            var xml2 = ['https://groups.google.com/a/openmrs.org/group/dev/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/announce/feed/rss_v2_0_topics.xml','https://groups.google.com/a/openmrs.org/group/svn/feed/rss_v2_0_topics.xml','https://source.openmrs.org/?view=fe&RSS=true','https://source.openmrs.org/?view=cru&RSS=true'];
-            xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET",feed,false); 
-            xmlhttp.send();
-            xmlDoc = xmlhttp.responseXML; //Get the xml
-            var list = "";
-            if (xml1.indexOf(feed) != -1) {
-                items = xmlDoc.getElementsByTagName("item"); //Get each item individually
-                for (i = 0; i < items.length; i++) { 
-                        var title = (items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
-                        var date = (items[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue).split(" +0000")[0];
-                        var description = items[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
-                        list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
+            var storage = window.localStorage;
+            if (storage.getItem(feed)) {
+                list = localStorage.getItem(feed)
+                $("#list").append(list);
+                $("#list").listview("refresh");
+                $(".contentLink").bind("click", function() { //Capture link click
+                    $("#article").empty();
+                    selected = $(this).data("entryid2");
+                    if (typeof selected !== "undefined") { //Check if everything is okay
+                        selectedEntry = selected;
                     }
+                    window.location = "#DisplayPage"; //View the content
+                });
             }
-            else if (xml2.indexOf(feed) != -1) {
-                items = xmlDoc.getElementsByTagName("item"); //Get each item individually
-                for (i = 0; i < items.length; i++) { 
-                        var title = (items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
-                        var date = (items[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue).split(" +0000")[0];
-                        var description = items[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
-                        list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
-                    }  
+            else{
+                refresh();
             }
-            else if (xml.indexOf(feed) == 0) {
-                items = xmlDoc.getElementsByTagName("item"); //Get each item individually
-                for (i = 0; i < items.length; i++) { 
-                        if (i == 1) {
-                        var title = "No Title";
-                        }
-                        else {
-                        var title = (items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
-                        }
-                        var date = (items[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue).split(" +0000")[0];
-                        var description = items[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
-                        list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
-                    }  
-            }
-            $("#list").append(list);
-            $("#list").listview("refresh");
-            $(".contentLink").bind("click", function() { //Capture link click
-                $("#article").empty();
-                selected = $(this).data("entryid");
-                if (typeof selected !== "undefined") { //Check if everything is okay
-                    selectedEntry = selected;
-                }
-                window.location = "#DisplayPage"; //View the content
+
+            $("#refresh").bind("click", function() {
+                refresh();
+                document.getElementById("disMes").innerHTML = "Successfully updated!";
             });
 
             $("#DisplayPage").bind("pagebeforeshow", function(prepage) {
-                if ((feed == 'https://ci.openmrs.org/rss/createAllBuildsRssFeed.action?feedType=rssAll') && selectedEntry == 1)
-                var title = (items[selectedEntry].getElementsByTagName("title")[0].childNodes[0].nodeValue); //get title name
+                var titlelist = storage.getItem(feed+"title") //get title name
+                var titlelist = titlelist.split(",");
+                var title = titlelist[selectedEntry];
                 document.getElementById("titleText").innerHTML = title; //Set title
-                content = items[selectedEntry].getElementsByTagName("description")[0].childNodes[0].nodeValue;
-
+                var contentlist = storage.getItem(feed+"description");
+                var contentlist = contentlist.split(",");
+                var content = contentlist[selectedEntry];
                 $("#article").append(content); //Preload content
 
                 $("a").click(function(event) {
                     event.preventDefault(); //Stop links from opening
                     href = this.href; //Get link from the link that was clicked
-                    if ((href != "file:///android_asset/www/index.html#mainPage") && (href != "file:///android_asset/www/index.html#") && (href != "file:///android_asset/www/index.html#share") && (href != "file:///android_asset/www/index.html#Favorites") && (href != "file:///android_asset/www/index.html#About") && (href != "file:///android_asset/www/index.html#addFavorite") && (href != "file:///android_asset/www/index.html#addFavorite")) { //Make sure none of these links were clicked
+                    if ((href != "file:///android_asset/www/index.html#mainPage") && (href != "file:///android_asset/www/index.html#") && (href != "file:///android_asset/www/index.html#share") && (href != "file:///android_asset/www/index.html#Favorites") && (href != "file:///android_asset/www/index.html#About") && (href != "file:///android_asset/www/index.html#addFavorite") && (href != "file:///android_asset/www/index.html#refresh")) { //Make sure none of these links were clicked
                         window.plugins.childBrowser.showWebPage(href, { showLocationBar: true }); //Open the link in a childbrowser in order to prevent glitches as well as to make it easier to get back to using the app
                     }
                 });
                 $("#share").click(function() {
+                    var linklist = storage.getItem(feed+"link");
+                    var linklist = linklist.split(",");
+                    var link = linklist[selectedEntry];
                     window.plugins.share.show({ //Let the user able to share the article easily
-                        subject: 'Article on OpenMRS',
-                        text: 'Here is a cool article I found on OpenMRS:\n'   + items[selectedEntry].getElementsByTagName("link")[0].childNodes[0].nodeValue},
+                        subject: 'Article on Fedora Planet',
+                        text: 'Here is a cool article I found on Fedora Planet:\n' + link},
                         function() {}, // Success function
                         function() {alert('Share failed')} // Failure function
                     );
