@@ -119,6 +119,7 @@
                 var descriptionlist = "";
                 var linklist = "";
                 var list = "";
+                var thekey = "afjdai0eufjiodkoasj90fjieokdasfhnkjkqwecc439021ujc";
                 if (xml1.indexOf(feed) != -1) {
                     for (i = 0; i < items.length; i++) { 
                             var title = (items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
@@ -137,10 +138,10 @@
                             if ((typeof link === "undefined") || (link == "")) {
                                 link = "No Link";
                             }
-                            titlelist += title + ",";
-                            datelist += date + ",";
-                            descriptionlist += description + ",";
-                            linklist += link + ",";
+                            titlelist += title + thekey;
+                            datelist += date + thekey;
+                            descriptionlist += description + thekey;
+                            linklist += link + thekey;
                             list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid2="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
                         }
                     }
@@ -162,10 +163,10 @@
                             if ((typeof link === "undefined") || (link == "")) {
                                 link = "No Link";
                             }
-                            titlelist += title + ",";
-                            datelist += date + ",";
-                            descriptionlist += description + ",";
-                            linklist += link + ",";
+                            titlelist += title + thekey;
+                            datelist += date + thekey;
+                            descriptionlist += description + thekey;
+                            linklist += link + thekey;
                             list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid2="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
                         }  
                     }
@@ -187,17 +188,17 @@
                             if ((typeof link === "undefined") || (link == "")) {
                                 link = "No Link"
                             }
-                            titlelist += title + ",";
-                            datelist += date + ",";
-                            descriptionlist += description + ",";
-                            linklist += link + ",";
+                            titlelist += title + thekey;
+                            datelist += date + thekey;
+                            descriptionlist += description + thekey;
+                            linklist += link + thekey;
                             list += '<li class="contentLink" style = "height: 100px"; text-align:center;><a href="#" data-transition="slide" class="contentLink" style = "font-size: 16px; text-decoration: none; color: black; white-space: normal; margin-top: 5px;" data-entryid2="'+i+'">' + title + '<br><br><p>' + date + '</p><br></a></li>'; //Create the list
                         }  
                     }
-                titlelist = titlelist.slice(0, -1)
-                datelist = datelist.slice(0, -1)
-                descriptionlist = descriptionlist.slice(0, -1)
-                linklist = linklist.slice(0, -1)
+                titlelist = titlelist.slice(0, -50)
+                datelist = datelist.slice(0, -50)
+                descriptionlist = descriptionlist.slice(0, -50)
+                linklist = linklist.slice(0, -50)
                 storage.setItem((feed+"title"), titlelist)
                 storage.setItem((feed+"date"), datelist)
                 storage.setItem((feed+"description"), descriptionlist)
@@ -252,25 +253,27 @@
             });
 
             $("#DisplayPage").bind("pagebeforeshow", function(prepage) {
+                var thekey = "afjdai0eufjiodkoasj90fjieokdasfhnkjkqwecc439021ujc";
                 var titlelist = storage.getItem(feed+"title") //get title name
-                var titlelist = titlelist.split(",");
+                var titlelist = titlelist.split(thekey);
                 var title = titlelist[selectedEntry];
                 document.getElementById("titleText").innerHTML = title; //Set title
                 var contentlist = storage.getItem(feed+"description");
-                var contentlist = contentlist.split(",");
+                var contentlist = contentlist.split(thekey);
                 var content = contentlist[selectedEntry];
-                $("#article").append(content); //Preload content
+                $("#article").html(content); //Preload content
 
                 $("a").click(function(event) {
                     event.preventDefault(); //Stop links from opening
                     href = this.href; //Get link from the link that was clicked
-                    if ((href != "file:///android_asset/www/index.html#mainPage") && (href != "file:///android_asset/www/index.html#") && (href != "file:///android_asset/www/index.html#share") && (href != "file:///android_asset/www/index.html#Favorites") && (href != "file:///android_asset/www/index.html#About") && (href != "file:///android_asset/www/index.html#addFavorite") && (href != "file:///android_asset/www/index.html#refresh")) { //Make sure none of these links were clicked
+                    if ((href != "file:///android_asset/www/index.html#mainPage") && (href != "file:///android_asset/www/index.html#") && (href != "file:///android_asset/www/index.html#share") && (href != "file:///android_asset/www/index.html#Favorites") && (href != "file:///android_asset/www/index.html#About") && (href != "file:///android_asset/www/index.html#addFavorite") && (href != "file:///android_asset/www/index.html#refresh") && (href != "file:///android_asset/www/index.html#viewPage")){ //Make sure none of these links were clicked
                         window.plugins.childBrowser.showWebPage(href, { showLocationBar: true }); //Open the link in a childbrowser in order to prevent glitches as well as to make it easier to get back to using the app
                     }
                 });
-                $("#share").click(function() {
+                $("#share").unbind("click").click(function() {
+                    var thekey = "afjdai0eufjiodkoasj90fjieokdasfhnkjkqwecc439021ujc";
                     var linklist = storage.getItem(feed+"link");
-                    var linklist = linklist.split(",");
+                    var linklist = linklist.split(thekey);
                     var link = linklist[selectedEntry];
                     window.plugins.share.show({ //Let the user able to share the article easily
                         subject: 'Article on Fedora Planet',
